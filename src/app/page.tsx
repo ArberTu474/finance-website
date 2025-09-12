@@ -1,25 +1,51 @@
-import { auth } from '@/lib/auth'
-import { headers } from 'next/headers'
-import { LoginButton, LogoutButton } from '../components/auth-buttons'
+import FeatureCard from '@/components/home-page/feature-card'
+import { Button } from '@/components/ui/button'
+import { ChartLine, CirclePlus, Eye } from 'lucide-react'
 
 export default async function Page() {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  })
-
-  if (!session) {
-    return (
-      <div>
-        You must be logged in
-        <LoginButton />
-      </div>
-    )
-  }
-
   return (
-    <div>
-      Welcome {session.user.email}
-      <LogoutButton />
+    <div className='min-h-screen w-full bg-background relative '>
+      {/* Midnight Mist */}
+      <div
+        className='absolute inset-0 z-0 transition-all'
+        style={{ backgroundImage: 'var(--gradient-bg)' }}
+      />
+      {/* Your Content/Components */}
+      <div className='container max-w-3xl mx-auto p-6 relative z-10'>
+        <div className='flex flex-col items-center text-center gap-6 mt-30 sm:mt-[15em]'>
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-5'>
+            Smarter Spending
+            <br />
+            <span className='text-muted-foreground'>Bigger Savings.</span>
+          </h1>
+
+          <p>
+            Take control of your finances with ease. Monitor your income and
+            expenses, visualize trends, and stay on top of your financial goals,
+            so you can make smarter decisions and save more every month.
+          </p>
+
+          {/* Features */}
+          <div className='w-full flex flex-col sm:flex-row gap-4 items-center justify-center shrink-0'>
+            <FeatureCard
+              title='Financial Insights'
+              description='See where every dollar goes'
+              color='blue'
+              icon={<ChartLine />}
+            />
+            <FeatureCard
+              title='Track your spending'
+              description='Monitor your money daily'
+              color='pink'
+              icon={<Eye />}
+            />
+          </div>
+
+          <Button size={'xl'} className='text-lg font-bold mt-6 cursor-pointer'>
+            Login
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }
