@@ -1,5 +1,4 @@
 import { getServerSession } from '@/lib/get-session'
-import { redirect } from 'next/dist/server/api-utils'
 import Image from 'next/image'
 import { unauthorized } from 'next/navigation'
 
