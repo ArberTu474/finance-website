@@ -10,19 +10,5 @@ export default async function DashboardPage() {
 
   if (!user) unauthorized()
 
-  return (
-    <div>
-      <Image
-        src={user.image || ''}
-        width={64}
-        height={64}
-        alt={user.name || 'User avatar'}
-      />
-      <h1>{user.name}</h1>
-      <LogoutButton>
-        <LogOut />
-        Log out
-      </LogoutButton>
-    </div>
-  )
+  return <div>Dashboard</div>
 }

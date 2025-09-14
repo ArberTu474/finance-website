@@ -70,22 +70,22 @@ export function LogoutButton({ children }: LogoutProps) {
   }
 
   return (
-    <Button
+    <div
       onClick={async () => {
         setLoading(true)
         await signOut()
       }}
-      type='button'
-      variant='outline'
-      size='xl'
+      // type='button'
+      // variant='outline'
+      // size='xl'
       className='w-full'
-      disabled={loading}
+      // disabled={loading}
     >
       {loading ? (
         <div className='size-4 border-foreground border-t-transparent border-2 rounded-full animate-spin'></div>
       ) : (
         children
       )}
-    </Button>
+    </div>
   )
 }
