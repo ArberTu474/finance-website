@@ -1,3 +1,5 @@
+import { Toaster } from '@/components/ui/sonner'
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -9,7 +11,10 @@ export default function HomeLayout({
         className='absolute inset-0 z-0'
         style={{ background: 'var(--gradient-bg)' }}
       />
-      <div className='relative z-10'>{children}</div>
+      <div className='relative z-10'>
+        {children}
+        <Toaster position='top-center' swipeDirections={['top']} />
+      </div>
     </div>
   )
 }

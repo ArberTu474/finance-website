@@ -6,8 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import GithubLoginButton from './oauth-login-button'
-import OauthLoginButton from './oauth-login-button'
+import { OauthLoginButton } from './auth-buttons'
 
 export function LoginForm({
   className,
@@ -15,7 +14,7 @@ export function LoginForm({
 }: React.ComponentProps<'div'>) {
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props}>
-      <Card className='bg-muted/70 transition-all backdrop-blur-md'>
+      <Card className='bg-muted/50 transition-all backdrop-blur-md'>
         <CardHeader className='text-center'>
           <CardTitle className='text-xl'>Welcome back</CardTitle>
           <CardDescription>
