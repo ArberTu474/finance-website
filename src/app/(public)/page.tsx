@@ -11,7 +11,9 @@ export default function Page() {
         <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-5'>
           Smarter Spending
           <br />
-          <span className='text-muted-foreground'>Bigger Savings.</span>
+          <span className='text-transparent bg-clip-text bg-gradient-to-r from-foreground to-purple-500/80 dark:to-purple-500/60'>
+            Bigger Savings
+          </span>
         </h1>
 
         <p>
