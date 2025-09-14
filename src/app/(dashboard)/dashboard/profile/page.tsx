@@ -18,7 +18,7 @@ export default async function ProfilePage() {
       />
       <h1 className='text-2xl'>{user.name}</h1>
       <h2>User Session</h2>
-      <pre className='bg-muted max-w-4xl p-6 rounded-xl overflow-x-scroll'>
+      <pre className='bg-muted p-6 rounded-xl overflow-x-scroll'>
         {JSON.stringify(session, undefined, 2)}
       </pre>
     </div>
