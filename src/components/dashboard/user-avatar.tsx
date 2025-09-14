@@ -60,7 +60,7 @@ export default async function UserAvatar() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href='dashboard/profile' className='flex items-center gap-3'>
+          <Link href='/dashboard/profile' className='flex items-center gap-3'>
             <User className='text-foreground' /> Profile
           </Link>
         </DropdownMenuItem>
