@@ -19,7 +19,7 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
-        !collapsed ? 'min-w-[16em]' : '',
+        !collapsed ? 'min-w-[14em] lg:min-w-[16em]' : '',
         'bg-sidebar min-h-svh p-4 border-r border-border'
       )}
     >

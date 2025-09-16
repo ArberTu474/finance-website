@@ -49,7 +49,7 @@ export default function MobileSidebar() {
                     'bg-sidebar-primary text-sidebar-primary-foreground':
                       pathname === link.href,
                     'hover:bg-sidebar-accent active:bg-sidebar-accent':
-                      pathname === link.href,
+                      pathname !== link.href,
                   },
                   'leading-0 flex items-center gap-2 p-2.5 rounded-lg'
                 )}
