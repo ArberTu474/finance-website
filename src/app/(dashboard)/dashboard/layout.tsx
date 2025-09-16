@@ -8,7 +8,9 @@ export default function HomeLayout({
 }>) {
   return (
     <div className='min-h-svh bg-background flex'>
-      <Sidebar />
+      <div className='hidden md:block'>
+        <Sidebar />
+      </div>
       <main className='grow overflow-auto'>
         <Navbar />
         <div className='p-4'>{children}</div>

@@ -1,10 +1,45 @@
-import Logo from '../logo'
+'use client'
+
+import { useState } from 'react'
+import { Button } from '../ui/button'
+import { PanelLeft } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import SidebarLink from './sidebar-link'
+import { cn } from '@/lib/utils'
+import { sideBarContent } from '@/content.ts/sidebar-content'
 
 export default function Sidebar() {
+  const pathname = usePathname()
+  const [collapsed, setCollapsed] = useState(false)
+
+  function handleCollapse() {
+    setCollapsed(!collapsed)
+  }
+
   return (
-    <aside className='hidden md:block bg-sidebar min-w-[20em] min-h-svh p-4 border-r border-border'>
-      <Logo size='lg' />
-      <h1>Sidebar</h1>
+    <aside
+      className={cn(
+        !collapsed ? 'min-w-[16em]' : '',
+        'bg-sidebar min-h-svh p-4 border-r border-border'
+      )}
+    >
+      <Button size='icon' variant='outline' onClick={() => handleCollapse()}>
+        <PanelLeft className='size-5' />
+      </Button>
+
+      <div className='space-y-2 mt-6'>
+        {sideBarContent.map((link, index) => (
+          <SidebarLink
+            key={index}
+            collapsed={collapsed}
+            active={pathname === link.href}
+            href={link.href}
+            icon={link.icon}
+          >
+            {link.title}
+          </SidebarLink>
+        ))}
+      </div>
     </aside>
   )
 }
