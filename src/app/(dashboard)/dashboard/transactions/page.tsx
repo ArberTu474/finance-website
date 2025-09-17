@@ -245,7 +245,7 @@ export default function TransactionsPage() {
                 </TableCell>
                 <TableCell className='px-2 text-center'>{item.date}</TableCell>
                 <TableCell className='px-2 text-center'>
-                  <span className='py-1 px-2.5 text-xs rounded-full text-gray-300 bg-gray-300/20 border border-gray-500/60'>
+                  <span className='py-1 px-2.5 text-xs rounded-full border text-gray-300 dark:text-gray-500/60 bg-gray-300/20 border-gray-500/60'>
                     {item.category}
                   </span>
                 </TableCell>
