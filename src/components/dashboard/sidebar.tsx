@@ -20,7 +20,7 @@ export default function Sidebar() {
     <aside
       className={cn(
         !collapsed ? 'min-w-[14em] lg:min-w-[16em]' : '',
-        'bg-sidebar min-h-svh p-4 border-r border-border'
+        'hidden md:block sticky top-0 h-svh bg-sidebar p-4 border-r border-border'
       )}
     >
       <Button size='icon' variant='outline' onClick={() => handleCollapse()}>

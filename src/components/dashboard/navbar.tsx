@@ -5,7 +5,7 @@ import UserAvatar from './user-avatar'
 
 export async function Navbar() {
   return (
-    <nav className='bg-sidebar p-4 border-b border-border flex items-center justify-between'>
+    <nav className='sticky top-0 z-10 bg-sidebar p-4 border-b border-border flex items-center justify-between'>
       <div className='flex items-center gap-4'>
         <div className='md:hidden block'>
           <MobileSidebar />

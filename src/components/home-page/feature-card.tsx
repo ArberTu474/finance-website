@@ -1,17 +1,17 @@
 import { ReactElement } from 'react'
 
 const colorsList: Record<string, string> = {
-  pink: 'bg-pink-500/20 text-pink-400 size-12',
-  red: 'bg-red-500/20 text-red-400 size-12',
-  yellow: 'bg-yellow-500/20 text-yellow-400 size-12',
-  blue: 'bg-blue-500/20 text-blue-400 size-12',
-  green: 'bg-green-500/20 text-green-400 size-12',
-  lime: 'bg-lime-500/20 text-lime-400 size-12',
-  violet: 'bg-violet-500/20 text-violet-400 size-12',
-  orange: 'bg-orange-500/20 text-orange-400 size-12',
-  cyan: 'bg-cyan-500/20 text-cyan-400 size-12',
-  purple: 'bg-purple-500/20 text-purple-400 size-12',
-  gray: 'bg-gray-500/20 text-gray-400 size-12',
+  pink: 'bg-pink-500/20 text-pink-400',
+  red: 'bg-red-500/20 text-red-400',
+  yellow: 'bg-yellow-500/20 text-yellow-400',
+  blue: 'bg-blue-500/20 text-blue-400',
+  green: 'bg-green-500/20 text-green-400',
+  lime: 'bg-lime-500/20 text-lime-400',
+  violet: 'bg-violet-500/20 text-violet-400',
+  orange: 'bg-orange-500/20 text-orange-400',
+  cyan: 'bg-cyan-500/20 text-cyan-400',
+  purple: 'bg-purple-500/20 text-purple-400',
+  gray: 'bg-gray-500/20 text-gray-400',
 }
 
 type Props = {
