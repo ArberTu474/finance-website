@@ -157,7 +157,7 @@ export default function TransactionsPage() {
               key={index}
               value={option.value}
               aria-label={option.label}
-              className='grow sm:grow-0 px-4 py-2 rounded-md text-sm font-medium border border-muted cursor-pointer data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:border data-[state=on]:border-border'
+              className='grow sm:grow-0 px-4 py-2 rounded-md text-sm font-medium border border-muted/50 cursor-pointer data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:border data-[state=on]:border-border'
             >
               {option.label}
             </ToggleGroupItem>
@@ -245,7 +245,7 @@ export default function TransactionsPage() {
                 </TableCell>
                 <TableCell className='px-2 text-center'>{item.date}</TableCell>
                 <TableCell className='px-2 text-center'>
-                  <span className='py-1 px-2.5 text-xs rounded-full bg-gray-300/20 border border-gray-500'>
+                  <span className='py-1 px-2.5 text-xs rounded-full text-gray-300 bg-gray-300/20 border border-gray-500/60'>
                     {item.category}
                   </span>
                 </TableCell>
