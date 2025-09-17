@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 import { PanelLeft } from 'lucide-react'
 import { usePathname } from 'next/navigation'
@@ -13,8 +13,14 @@ export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false)
 
   function handleCollapse() {
+    localStorage.setItem('sidebar-collapsed', String(collapsed))
     setCollapsed(!collapsed)
   }
+
+  useEffect(() => {
+    const saved = localStorage.getItem('sidebar-collapsed')
+    if (saved) setCollapsed(saved === 'true')
+  }, [])
 
   return (
     <aside

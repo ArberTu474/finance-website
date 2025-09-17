@@ -150,7 +150,7 @@ export default function TransactionsPage() {
         <ToggleGroup
           type='single'
           defaultValue='all'
-          className='inline-flex w-full sm:w-fit rounded-lg p-1 bg-muted'
+          className='inline-flex w-full sm:w-fit rounded-lg p-1 bg-muted/50'
         >
           {toggleOptions.map((option, index) => (
             <ToggleGroupItem
@@ -210,7 +210,7 @@ export default function TransactionsPage() {
       </ScrollArea> */}
       <div className='overflow-x-auto  max-w-full rounded-md mt-4'>
         <Table className='max-w-full '>
-          <TableHeader className='rounded-t-md bg-muted font-normal'>
+          <TableHeader className='rounded-t-md bg-muted/50 font-normal'>
             <TableRow className='border-none'>
               <TableHead className='px-2 text-center py-4 rounded-l-md'>
                 Type
@@ -245,7 +245,7 @@ export default function TransactionsPage() {
                 </TableCell>
                 <TableCell className='px-2 text-center'>{item.date}</TableCell>
                 <TableCell className='px-2 text-center'>
-                  <span className='py-1 px-2.5 text-xs rounded-full bg-gray-300/40 border border-gray-500'>
+                  <span className='py-1 px-2.5 text-xs rounded-full bg-gray-300/20 border border-gray-500'>
                     {item.category}
                   </span>
                 </TableCell>
